@@ -1,0 +1,21 @@
+
+.footer {
+    grid-area: footer;
+    background-color: var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+
+    .footer-text {
+        color: var(--color-light);
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 1.5rem;
+    }
+}

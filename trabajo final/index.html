@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Alfredo Ramirez 29205606 | Gunners Diseños</title>
+   
+   <link rel="shortcut icon" href="./assets/img/logptp.jpg" type="image/x-icon">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+   <link rel="stylesheet" href="./css/base.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <div class="logoptp-container">
+         <a href="#" class="logoptp-link">
+            <img src="./assets/img/logptp.jpg" alt="Logo de Gunners Diseños" class="logoptp">
+         </a>
+         <h1 class="site-title">
+            Transformamos ideas en identidad
+         </h1>
+      </div>
+
+      <nav class="top-nav">
+         <ul class="top-nav-list">
+            <li class="top-nav-item">
+               <a href="#registro" class="top-nav-link">Registro</a>
+            </li>
+            <li class="top-nav-item">
+               <a href="./pages/carrito.html" class="cart-link" style="position: relative; display: inline-block;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                     <path fill="currentColor"
+                        d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85">
+                     </path>
+                  </svg>
+                  <span id="cart-count" class="count" style="position: absolute; top: -10px; right: -10px; background: red; color: white; border-radius: 50%; min-width: 20px; text-align: center; font-size: 12px; padding: 2px;">0</span>
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <nav class="main-nav">
+      <ul class="main-nav-list">
+         <li class="main-nav-item"><a href="#" class="main-nav-link">Inicio</a></li>
+         <li class="main-nav-item"><a href="#productos" class="main-nav-link">Productos</a></li>
+         <li class="main-nav-item"><a href="#reviews" class="main-nav-link">Reseñas</a></li>
+         <li class="main-nav-item"><a href="#contacto" class="main-nav-link">Contacto</a></li>
+      </ul>
+   </nav>
+
+   <main>
+
+      <section class="hero-section">
+         <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+               <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="./assets/img/TPF2.jpg" class="d-block w-100" alt="Colección destacada 1">
+               </div>
+               <div class="carousel-item">
+                  <img src="./assets/img/tpf3.jpg" class="d-block w-100" alt="Colección destacada 2">
+               </div>
+               <div class="carousel-item">
+                  <img src="./assets/img/tpf4.jpg" class="d-block w-100" alt="Colección destacada 3">
+               </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Siguiente</span>
+            </button>
+         </div>
+      </section>
+
+      <section id="productos" class="products-section">
+         <h2 class="section-title">Productos Destacados</h2>
+
+         <div id="productCard" class="products-grid">
+            
+            <article class="product-card">
+               <img src="./assets/img/tpf7.jpg" alt="Stickers circulares">
+               <div class="product-content">
+                  <h3 class="product-title">Stickers Circulares Personalizados</h3>
+                  <p class="product-description">
+                     En Gunners Diseños realizamos stickers circulares personalizados, ideales para darle identidad y estilo a tus productos, emprendimientos, regalos o eventos. Diseñamos cada sticker de manera creativa y profesional.
+                  </p>
+                  <p class="product-price"><span>Precio:</span> 10 x $3500</p>
+                  <button type="button" class="product-button">Comprar</button>
+               </div>
+            </article>
+
+         </div>
+
+         <div style="text-align:center; margin-top:20px;">
+            <button id="mostrarProducts" class="product-button">Mostrar más productos</button>
+         </div>
+      </section>
+
+      <section id="reviews" class="reviews-section">
+         <h2 class="section-title">Opiniones de Nuestros Clientes</h2>
+         
+         <div class="reviews-grid">
+            <article class="review-card">
+               <h3 class="review-title">"La atención fue muy buena desde el primer mensaje."</h3>
+               <p class="review-text">Los diseños son originales y los trabajos llegan tal como los muestran.</p>
+               <p class="review-author">- María González</p>
+            </article>
+
+            <article class="review-card">
+               <h3 class="review-title">"Encargué stickers y toppers para el cumpleaños de mi hijo y quedaron buenísimos."</h3>
+               <p class="review-text">La atención al detalle es asombrosa y me siento increíble con cada compra. Muy recomendables Gunners Diseños.</p>
+               <p class="review-author">- Lucas Fernández</p>
+            </article>
+
+            <article class="review-card">
+               <h3 class="review-title">"Estilo Personalizado y Únicos"</h3>
+               <p class="review-text">Mandé a hacer almanaques personalizados para mi negocio y el diseño quedó excelente. Muy atentos y profesionales en todo momento.</p>
+               <p class="review-author">- Camila Rodríguez</p>
+            </article>
+         </div>
+      </section>
+
+      <section id="contacto" class="contact-section">
+         <h2 class="section-title">¿Tienes Preguntas? Contáctanos</h2>
+         <p class="contact-description">Nuestro equipo está listo para ayudarte a encontrar el diseño perfecto.</p>
+
+         <form action="https://formspree.io/#" method="POST" class="contact-form">
+            <div class="form-group">
+               <label for="nombre" class="form-label">Nombre</label>
+               <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+               <label for="email" class="form-label">Correo Electrónico</label>
+               <input type="email" id="email" name="email" class="form-input" placeholder="tu.correo@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+               <label for="mensaje" class="form-label">Mensaje</label>
+               <textarea id="mensaje" name="mensaje" class="form-textarea" rows="6" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+            </div>
+
+            <input type="submit" value="Enviar Mensaje" class="submit-button">
+         </form>
+      </section>
+
+   </main>
+
+   <footer class="footer">
+      <p class="footer-text">© 2026 Gunners Diseños - Todos los derechos reservados</p>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+
+   <script src="./js/carrito.js"></script>
+</body>
+
+</html>

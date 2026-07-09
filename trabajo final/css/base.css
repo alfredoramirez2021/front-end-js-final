@@ -1,0 +1,36 @@
+/* Base Styles */
+
+/* Libreria de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Reset de elementos */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Variables CSS */
+:root {
+   --color-primary: #062153;
+   --color-secondary: #0a7886;
+   --color-light: #06defa;
+   --color-background: #d6e3e7;
+   --color-text: #374151;
+   --color-border: #d1d5db;
+
+   --shadow: 0 2px 8px rgba(58, 58, 58);
+
+   --radius-md: 1rem;
+   --radius-lg: 1.5rem;
+
+   --transition: all 0.3s ease;
+
+   --font-main: "Roboto Mono", monospace;
+}
+
+html {
+   font-size: 15px;
+   scroll-behavior: smooth;
+}
+

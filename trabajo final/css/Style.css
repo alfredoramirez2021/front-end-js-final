@@ -1,0 +1,440 @@
+/* ==========================================================================
+   VARIABLES GLOBALES (Paleta de colores y utilidades de respaldo)
+   ========================================================================== */
+:root {
+   --color-primary: #1e3a8a;      /* Azul oscuro principal */
+   --color-secondary: #ef4444;    /* Rojo acento (Gunners) */
+   --color-background: #f8fafc;   /* Fondo claro */
+   --color-text: #1e293b;         /* Color de texto principal */
+   --color-light: #ffffff;        /* Blanco */
+   --color-border: #cbd5e1;       /* Bordes grises */
+   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --radius-md: 0.375rem;
+   --radius-lg: 0.5rem;
+   --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   ESTRUCTURA BASE / GRID GLOBAL
+   ========================================================================== */
+body {
+   font-family: var(--font-main);
+   background-color: var(--color-background);
+   color: var(--color-text);
+   min-height: 100vh;
+   margin: 0;
+
+   display: grid;
+   grid-template-areas: 
+      "header"
+      "navigation"
+      "main"
+      "footer";
+   grid-template-columns: 1fr;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+   grid-area: header;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 5%;
+   background-color: var(--color-light);
+   box-shadow: var(--shadow);
+}
+
+.header .logoptp-container { /* Corregido clase para coincidir con tu HTML */
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.header .logoptp {
+   width: 4rem;
+   height: 4rem;
+   object-fit: cover;
+   aspect-ratio: 1 / 1;
+   border-radius: 50%;
+}
+
+.header .site-title {
+   font-size: 1.8rem;
+   color: var(--color-primary);
+   margin: 0;
+}
+
+.header .top-nav-list {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.header .top-nav-link {
+   text-decoration: none;
+   color: var(--color-primary);
+   font-weight: 600;
+   transition: var(--transition);
+}
+
+.header .top-nav-link:hover {
+   color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   NAVEGACIÓN PRINCIPAL (STICKY)
+   ========================================================================== */
+.main-nav {
+   grid-area: navigation;
+   position: sticky;
+   top: 0;
+   width: 100%;
+   z-index: 1000;
+   padding: 0.75rem 5%;
+   background-color: var(--color-primary);
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box;
+}
+
+.main-nav-list {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.main-nav-link {
+   position: relative;
+   text-decoration: none;
+   color: var(--color-light);
+   font-weight: 600;
+   transition: var(--transition);
+}
+
+.main-nav-link::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -0.4rem;
+   width: 0%;
+   height: 2px;
+   background-color: var(--color-secondary);
+   transition: var(--transition);
+}
+
+.main-nav-link:hover::after {
+   width: 100%;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL (MAIN) Y SECCIONES
+   ========================================================================== */
+main {
+   grid-area: main;
+}
+
+main section {
+   padding: 4rem 8%;
+}
+
+.section-title {
+   font-size: 2.2rem;
+   text-align: center;
+   margin-bottom: 3rem;
+   color: var(--color-primary);
+   font-weight: 700;
+}
+
+/* --- HÉROE / CAROUSEL --- */
+.hero-section {
+   width: 100%;
+   padding: 0 !important;
+}
+
+.hero-section .carousel-item img {
+   height: 35rem;
+   object-fit: cover;
+   filter: brightness(0.85);
+}
+
+/* --- SECCIÓN PRODUCTOS (GRID DINÁMICO) --- */
+.products-section .products-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2rem;
+}
+
+.products-section .product-card {
+   background-color: var(--color-light);
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   box-shadow: var(--shadow);
+   transition: var(--transition);
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.products-section .product-card:hover {
+   transform: translateY(-0.5rem);
+   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.products-section .product-card img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   display: block;
+}
+
+.products-section .product-content {
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1; /* Permite estirar el contenedor uniformemente */
+   gap: 0.75rem;
+}
+
+.products-section .product-title {
+   font-size: 1.3rem;
+   color: var(--color-primary);
+   margin: 0;
+}
+
+.products-section .product-description {
+   line-height: 1.6;
+   margin: 0;
+   min-height: 80px; /* Evita desalineación por cantidad de texto */
+}
+
+.products-section .product-price {
+   font-size: 1.2rem;
+   margin: 0;
+}
+
+.products-section .product-price span {
+   font-weight: bold;
+}
+
+.products-section .product-button {
+   width: 100%;
+   border: none;
+   padding: 0.85rem;
+   border-radius: var(--radius-md);
+   background-color: var(--color-secondary);
+   color: var(--color-light);
+   font-weight: 700;
+   cursor: pointer;
+   transition: var(--transition);
+   margin-top: auto; /* Empuja el botón siempre al fondo de la card */
+}
+
+.products-section .product-button:hover {
+   background-color: var(--color-primary);
+}
+
+/* --- SECCIÓN RESEÑAS --- */
+.reviews-section {
+   background-color: #e0e7ff;
+}
+
+.reviews-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 2rem;
+}
+
+.review-card {
+   background-color: var(--color-light);
+   padding: 2.5rem 2rem;
+   border-radius: var(--radius-lg);
+   box-shadow: var(--shadow);
+   transition: var(--transition);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.review-card:hover {
+   transform: translateY(-0.4rem);
+}
+
+.review-card .review-title {
+   margin: 0 0 1rem 0;
+   color: var(--color-primary);
+   font-size: 1.1rem;
+   font-style: italic;
+}
+
+.review-card .review-text {
+   line-height: 1.8;
+   margin: 0 0 1.5rem 0;
+}
+
+.review-card .review-author {
+   align-self: flex-end;
+   margin: 0;
+   font-weight: 700;
+   color: var(--color-secondary);
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.contact-section {
+   background-color: var(--color-light);
+}
+
+.contact-description {
+   text-align: center;
+   max-width: 45rem;
+   margin: 0 auto 3rem;
+}
+
+.contact-form {
+   max-width: 50rem;
+   margin: auto;
+   background-color: var(--color-light);
+   padding: 3rem;
+   border-radius: var(--radius-lg);
+   box-shadow: var(--shadow);
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.contact-form .form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 0.6rem;
+}
+
+.contact-form .form-label {
+   font-weight: 700;
+}
+
+.contact-form .form-input,
+.contact-form .form-textarea {
+   padding: 1rem;
+   border-radius: var(--radius-md);
+   border: 1px solid var(--color-border);
+   font-family: inherit;
+   transition: var(--transition);
+}
+
+.contact-form .form-input:focus,
+.contact-form .form-textarea:focus {
+   outline: none;
+   border-color: var(--color-secondary);
+   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.contact-form .submit-button {
+   border: none;
+   padding: 1rem;
+   border-radius: var(--radius-md);
+   background-color: var(--color-secondary);
+   color: var(--color-light);
+   font-weight: bold;
+   cursor: pointer;
+   transition: var(--transition);
+}
+
+.contact-form .submit-button:hover {
+   background-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+   grid-area: footer;
+   background-color: var(--color-primary);
+   color: var(--color-light);
+   text-align: center;
+   padding: 1.5rem;
+}
+
+.footer-text {
+   margin: 0;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+   .header {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+   }
+   
+   .hero-section .carousel-item img {
+      height: 28rem;
+   }
+}
+
+@media (max-width: 768px) {
+   html {
+      font-size: 14px;
+   }
+
+   .main-nav-list {
+      flex-wrap: wrap;
+      gap: 1rem;
+   }
+
+   main section {
+      padding: 3rem 5%;
+   }
+
+   .section-title {
+      font-size: 1.8rem;
+   }
+
+   .hero-section .carousel-item img {
+      height: 22rem;
+   }
+}
+
+@media (max-width: 480px) {
+   html {
+      font-size: 13px;
+   }
+
+   .header {
+      padding: 1rem;
+   }
+
+   .header .logoptp-container {
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .header .site-title {
+      font-size: 1.5rem;
+   }
+
+   .hero-section .carousel-item img {
+      height: 16rem;
+   }
+
+   .products-section .products-grid {
+      grid-template-columns: 1fr; /* Una sola columna fluida en móviles pequeños */
+      gap: 1.5rem;
+      padding: 0;
+   }
+
+   .contact-form {
+      padding: 1.5rem;
+   }
+}

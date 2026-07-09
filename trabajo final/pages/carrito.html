@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mi Carrito | Gunners Diseños</title>
+   
+   <link rel="shortcut icon" href="../assets/img/logptp.jpg" type="image/x-icon">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <div class="logoptp-container">
+         <a href="../index.html" class="logoptp-link">
+            <img src="../assets/img/logptp.jpg" alt="Logo de Gunners Diseños" class="logoptp">
+         </a>
+         <h1 class="site-title">
+            Transformamos ideas en identidad
+         </h1>
+      </div>
+
+      <nav class="top-nav">
+         <ul class="top-nav-list">
+            <li class="top-nav-item">
+               <a href="#" class="cart-link" style="position: relative; display: inline-block;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                     <path fill="currentColor"
+                        d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85">
+                     </path>
+                  </svg>
+                  <span id="cart-count" class="count" style="position: absolute; top: -10px; right: -10px; background: red; color: white; border-radius: 50%; min-width: 20px; text-align: center; font-size: 12px; padding: 2px;">0</span>
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <nav class="main-nav">
+      <ul class="main-nav-list">
+         <li class="main-nav-item"><a href="../index.html" class="main-nav-link">Inicio</a></li>
+         <li class="main-nav-item"><a href="../index.html#productos" class="main-nav-link">Productos</a></li>
+         <li class="main-nav-item"><a href="../index.html#reviews" class="main-nav-link">Reseñas</a></li>
+         <li class="main-nav-item"><a href="../index.html#contacto" class="main-nav-link">Contacto</a></li>
+      </ul>
+   </nav>
+
+   <main class="container my-5">
+      <div class="row justify-content-center">
+         <div class="col-12 col-lg-10 bg-white p-4 p-md-5 rounded shadow-sm">
+            
+            <h2 class="text-center mb-4 fw-bold" style="color: var(--color-primary);">
+               🛒 Detalle de tu Pedido
+            </h2>
+
+            <div id="itemProducts" class="table-responsive">
+               <p class="carrito-empty text-center py-4">
+                  El carrito está vacío
+               </p>
+            </div>
+
+            <div class="text-center mt-4">
+               <a href="../index.html" class="btn btn-outline-secondary px-4 py-2">
+                  ← Seguir Comprando
+               </a>
+            </div>
+
+         </div>
+      </div>
+   </main>
+
+   <footer class="footer mt-auto">
+      <p class="footer-text">© 2026 Gunners Diseños - Todos los derechos reservados</p>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+
+   <script src="../js/carrito.js"></script>
+</body>
+
+</html>
